@@ -3,9 +3,9 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: '',
-  tagline: 'InfraredAces-Logo.svg',
-  favicon: '',
+  title: 'InfraredAces',
+  tagline: '',
+  favicon: 'InfraredAces-Logo.svg',
 
   // Set the production url of your site here
   url: 'https://infraredaces.github.io',
@@ -31,6 +31,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
         },
         blog: {
         },
@@ -43,21 +44,21 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: '',
+    image: 'InfraredAces-Logo.svg',
     navbar: {
-      title: '',
+      title: 'InfraredAces',
       logo: {
         alt: '',
-        src: '',
+        src: 'InfraredAces-Logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: '',
+          sidebarId: 'docSidebar',
           position: 'left',
-          label: '',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/InfraredAces/personal-site',
           label: 'GitHub',
