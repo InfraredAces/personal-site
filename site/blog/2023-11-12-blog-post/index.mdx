@@ -1,0 +1,40 @@
+---
+title: Creating a Custom GP2040-CE PCB Replacement
+description: How to make a custom RP2040 based PCB for use with GP2040-CE to replace an existing controller board
+# slug:
+authors: InfraredAces
+# tags:
+# image:
+---
+
+Using my experience creating a drop in replacement board for the PXN X9 to provide an example of the process of making one's own custom RP2040 based board and using it with GP2040-CE firmware.
+
+<!-- truncate-->
+
+## General PCB Creation Process
+
+This is the general process for creating a PCB to replace an existing board.
+
+```mermaid
+flowchart TD
+    Measure("Measure dimensions of existing PCB")
+    EdgeCut("Create Edge Cut")
+    TestBoardFit("Have Board Fabricated and Test Fit")
+
+    Measure --> EdgeCut
+    EdgeCut --> TestBoardFit
+    TestBoardFit -.->|Test Fit Fails| Measure
+
+    CreateSchematic("Create Schematic for Board Components")
+    ReviewDesign("Review Schematic Design")
+    BoardLayout("Layout components on PCB")
+    TestBoard("Have Board Fabricated and Assembled and Test Board")
+    BoardCompleted([Board Successfully Created])
+
+    TestBoardFit -.->|Test Fit Succeeds| CreateSchematic
+    CreateSchematic --> ReviewDesign
+    ReviewDesign --> BoardLayout
+    BoardLayout --> TestBoard
+    TestBoard -.->|Board Test Fails| ReviewDesign
+    TestBoard -.->|Board Test Succeeds| BoardCompleted
+```

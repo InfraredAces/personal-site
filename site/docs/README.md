@@ -1,5 +1,4 @@
 ---
-slug: "/"
 title: README
 # tags:
 # -
