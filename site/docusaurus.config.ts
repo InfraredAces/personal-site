@@ -8,8 +8,8 @@ const config: Config = {
   favicon: "InfraredAces-Logo.svg",
 
   // Set the production url of your site here
-  url: "https://infraredaces.github.io",
-  baseUrl: "/personal-site/",
+  url: "https://infrared-aces.com/",
+  baseUrl: "/",
 
   organizationName: "InfraredAces", // Usually your GitHub org/user name.
   projectName: "personal-site", // Usually your repo name.
